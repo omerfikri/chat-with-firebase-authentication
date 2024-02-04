@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, serverTimestamp } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAyltMd-zBdBT1-sQKv42DGf7a-sW2tyOI",
@@ -15,7 +16,8 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 // Firestore bağlantısını alın
 const db = getFirestore(firebaseApp);
+const auth = getAuth();
 
 const timestamp = serverTimestamp();
 
-export { db, timestamp };
+export { db, timestamp, auth };
