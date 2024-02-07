@@ -5,7 +5,6 @@ import { ref } from "vue";
 const kullanici = ref(auth.currentUser);
 
 onAuthStateChanged(auth, (k) => {
-  console.log(k);
   kullanici.value = k;
 });
 

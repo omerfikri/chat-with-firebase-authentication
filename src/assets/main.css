@@ -1,6 +1,7 @@
 body {
   background: #3d3d3d;
   color: #444;
+
 }
 .container {
   width: 90%;
@@ -9,6 +10,7 @@ body {
   border-radius: 7px;
   box-shadow: 2px 4px 6px rgba(28, 6, 49, 0.1);
   background: white;
+ 
 }
 
 
@@ -92,11 +94,9 @@ nav p.email {
 .chat-window {
   background: #fafafa;
   padding: 30px 20px;
+  height: 40vh;
 }
-.single {
-  margin: 18px 0;
-  
-}
+
 .created-at {
   display: block;
   color: #999;

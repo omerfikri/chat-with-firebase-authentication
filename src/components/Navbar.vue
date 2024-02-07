@@ -22,7 +22,6 @@
           router.push({ name: "home" });
         });
       };
-      console.log(kullanici);
 
       return { cikisYap, kullanici };
     },

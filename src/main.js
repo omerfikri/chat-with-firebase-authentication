@@ -1,11 +1,19 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import { auth } from "./firebase/config";
+import { onAuthStateChanged } from "firebase/auth";
 
-const app = createApp(App)
+let app1;
 
-app.use(router)
+onAuthStateChanged(auth, () => {
+  if (!app1) {
+    const app = createApp(App);
 
-app.mount('#app')
+    app.use(router);
+
+    app1 = app.mount("#app");
+  }
+});
